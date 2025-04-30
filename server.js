@@ -10,7 +10,7 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://neon-dragon-dcdf85.netlify.app/", // Frontend URL
+  origin: "http://localhost:5173", // Frontend URL
   credentials: true // Allow cookies to be sent with the request
 }));
 // DB Connection
