@@ -10,7 +10,7 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ["https://neon-dragon-dcdf85.netlify.app"],
+  origin: ["https://spiffy-cucurucho-832381.netlify.app/"],
   credentials: true
 }));
 
