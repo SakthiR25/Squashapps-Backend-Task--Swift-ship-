@@ -61,10 +61,8 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
-app.use(cors({
-  origin: "http://localhost:5173", // Frontend URL
-  credentials: true // Allow cookies to be sent with the request
-}));
+app.use(cors());
+
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -75,10 +73,10 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
-app.get('/api/test', (req, res) => {
-  console.log("GET /api/test hit");
-  res.json({ message: "API is working" });
+app.get('/api/hello', (req, res) => {
+  res.send('Hello World');
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
