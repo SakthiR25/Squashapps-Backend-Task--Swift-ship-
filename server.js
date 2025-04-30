@@ -9,8 +9,10 @@ dotenv.config();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
-
+app.use(cors({
+  origin: "http://localhost:5173", // Frontend URL
+  credentials: true // Allow cookies to be sent with the request
+}));
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
