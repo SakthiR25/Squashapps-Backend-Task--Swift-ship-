@@ -10,9 +10,8 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ["https://spiffy-cucurucho-832381.netlify.app/"], // Update with the exact frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"],  // Specify allowed methods
-  credentials: true
+  origin: "https://spiffy-cucurucho-832381.netlify.app/", // Frontend URL
+  credentials: true // Allow cookies to be sent with the request
 }));
 
 
