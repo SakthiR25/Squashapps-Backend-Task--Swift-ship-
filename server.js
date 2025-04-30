@@ -10,7 +10,7 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://spiffy-cucurucho-832381.netlify.app", // Frontend URL
+  origin: "https://melodic-meringue-0615b7.netlify.app", // Frontend URL
   credentials: true // Allow cookies to be sent with the request
 }));
 
