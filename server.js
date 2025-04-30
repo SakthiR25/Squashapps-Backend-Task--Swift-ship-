@@ -10,9 +10,10 @@ dotenv.config();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://neon-dragon-dcdf85.netlify.app/", // Frontend URL
-  credentials: true // Allow cookies to be sent with the request
+  origin: ["https://neon-dragon-dcdf85.netlify.app"],
+  credentials: true
 }));
+
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
